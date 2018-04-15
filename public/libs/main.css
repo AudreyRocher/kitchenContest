@@ -1,0 +1,268 @@
+/*MAIN FONTS*/
+@import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great');
+/*MAIN*/
+body {
+  margin-top: 0;
+  margin: auto;
+}
+
+h1, h3 {
+  margin-left: 1rem;
+}
+
+h5, h6, p{
+  margin-left: 3rem;
+}
+ p {
+   margin: auto;
+ }
+
+ h4 {
+   text-align: center;
+   font-family: 'Fredericka the Great', cursive;
+ }
+
+ ::-webkit-input-placeholder {
+   color: #80a095;
+ }
+ ::-moz-placeholder {
+   color: #80a095;
+ }
+ :-ms-input-placeholder {
+   color: #80a095;
+ }
+ ::placeholder {
+   color: #80a095;
+ }
+
+/*FORMS PAGE ACCUEIL*/
+#register {
+  background-image: url(../images/kitchenContest.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 96%;
+}
+
+#mainTitle {
+  font-size: 6rem;
+  padding-top: 1rem;
+  font-family: 'Fredericka the Great', cursive;
+  margin: auto;
+  text-align: center;
+}
+
+#begin {
+  text-align: center;
+}
+
+#first {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-left: 2rem;
+}
+
+#inscription, #connexion{
+  padding: 1rem;
+  margin-top: 2rem;
+  background-color: #dfd1c6;
+  border-radius: 5%;
+  border: solid 2px #80a095;
+}
+
+#credits {
+  text-align: center;
+}
+
+.blink {
+  color: #dfd1c6;
+  -webkit-animation: blinker 1s linear infinite;
+}
+
+@-webkit-keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+.wrong {
+  text-align: center;
+  color: #AE324B;
+  font-size: 1.3rem;
+}
+
+/*WAITING ROOM*/
+.typo {
+  font-family: 'Fredericka the Great', cursive;
+}
+
+.hide {
+  display: none;
+}
+#punchline {
+  margin-left: 5rem;
+  font-size: 1.3rem;
+  color: #80a095;
+}
+
+#play {
+  display: flex;
+  justify-content: space-between;
+}
+
+#hall{
+  padding-top: 1rem;
+  margin-left: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  width: 65%;
+}
+
+#highScores {
+  width: 25%;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: #80a095;
+  margin-right: 2rem;
+  padding: 0 1rem;
+}
+
+#highScores>p{
+  font-weight: bold;
+  font-size: 1.5rem;
+  font-family: 'Fredericka the Great', cursive;
+}
+
+li {
+  font-size: 1.3rem;
+  font-family: 'Fredericka the Great', cursive;
+}
+
+#player1{
+  margin-left: 3rem;
+  width: 50%;
+}
+
+#chief1>input {
+  height: 1rem;
+}
+
+.name {
+  font-weight: bold;
+  font-size: 1.5rem;
+  font-family: 'Fredericka the Great', cursive;
+}
+
+/*DIVS*/
+.joueursLobby {
+  background-color: #dfd1c6;
+  width: 20%;
+}
+
+.ciblage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: solid 1px black;
+  width: 15%;
+  height: 15rem;
+  border-radius: 5%;
+  margin-right: 1%;
+}
+
+.but {
+  border-radius: 10%;
+  margin-bottom: 0.3rem;
+}
+
+.avatars {
+  border-radius: 30%;
+  margin-bottom: 1rem;
+}
+
+/*CSS PLAYERS ROOMS*/
+#kitchenContest {
+  display: flex;
+  justify-content: space-around;
+}
+
+.inGame{
+  height: 180px;
+  border: 1px solid black;
+  width: 40%;
+  border-radius: 10px;
+  padding-left: 1rem;
+  -webkit-box-shadow: 8px 8px 0px 1px rgba(128,160,149,1);
+  -moz-box-shadow: 8px 8px 0px 1px rgba(128,160,149,1);
+  box-shadow: 8px 8px 0px 1px rgba(128,160,149,1);
+}
+
+#kitchenContest p{
+  font-size: 2rem;
+  font-family: 'Fredericka the Great', cursive;
+}
+
+.consigne {
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+/* CSS POUR LES RECETTES */
+#orga {
+  display: flex;
+  flex-direction: row;
+}
+
+/* FORMULAIRE DE JEU */
+#cookingHall {
+  display: flex;
+}
+
+.form-jeu {
+  margin: auto;
+  margin-bottom: 1.3rem;
+  width: 70%;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin-top: 2rem;
+  -webkit-box-shadow: 11px 11px 0px 1px rgba(128,160,149,1);
+  -moz-box-shadow: 11px 11px 0px 1px rgba(128,160,149,1);
+  box-shadow: 11px 11px 0px 1px rgba(128,160,149,1);
+}
+
+#cookingBook input {
+  height: 3%;
+}
+
+#ok {
+  margin-bottom: 0.3rem;
+  margin-left: 38%;
+}
+
+/* RECETTES DU JEU */
+.recipe {
+  background-color: #80a095;
+  margin-top: 1.5rem;
+  line-height: 4rem;
+  width: 50%;
+  border: 1px solid black;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-right: 2rem;
+}
+
+#countdown {
+  line-height: 7rem;
+  margin-right: 20%;
+  font-size: 2rem;
+  color: #AE324B;
+  font-weight: bold;
+}
+
+/*FOOTER*/
+footer {
+  margin: auto;
+  background-color: #80a095;
+}

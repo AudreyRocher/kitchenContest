@@ -1,0 +1,94 @@
+html
+  body
+    meta(name="description" content="Kitchen contest, a node js and socket io multiplayer game. Audrey Rocher est développeur intégrateur web fullstack javascript mais également co-fondatrice de Lacimenterie et CEO de P'tit Building. ")
+    meta(name="author" content="Audrey Rocher développeur fullstack entrepreneur et architecte")
+    meta(name="viewport" content="width=device-width, initial-scale=1, user-scalable=no")
+    meta(name="robots" content="index, follow")
+    meta(name="googlebot" content="index, follow")
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+    script(src="/socket.io/socket.io.js")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css")
+    link(rel="stylesheet" href="public/libs/main.css")
+    script.
+      var socket = io.connect('http://www.audreyrocher.com/');
+      
+    script.
+      function verif(chars) {
+      var regex = new RegExp("[a-z0-9]", "i");
+      var valid;
+      for (x = 0; x < chars.value.length; x++) {
+      valid = regex.test(chars.value.charAt(x));
+      if (valid == false) {
+      chars.value = chars.value.substr(0, x) + chars.value.substr(x + 1, chars.value.length - x + 1); x--;
+      }
+      }
+      }
+    script(src="public/javascripts/newmain.js") 
+    script(type="text/javascript").
+      //<!--
+      document.oncontextmenu = new Function("return false");
+      //--> 
+      // Global site tag (gtag.js) - Google Analytics
+    script(async="" src="https://www.googletagmanager.com/gtag/js?id=UA-113067710-1")
+    script.
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config''UA-113067710-1');
+    link(rel="icon" type="image/png" href="public/images/faviconAudreyRocherRadius.png" sizes="16x16")
+    #register
+      h1#mainTitle Welcome to kitchen contest !
+      h4 the first contest based on crazy recipes from movies and tv shows...
+      h5#begin.blink Pour jouer, inscrivez vous ou connectez vous
+      #first
+        form#inscription(method="post")
+          p Inscription
+          p
+            input(type="text" id="pseudo" placeholder="ton pseudo" onkeyup="verif(this)")
+          p
+            input(type="password" id="password" placeholder="mot de passe")
+            input(type="submit" name="" value="envoyer")
+          p
+  
+        form#connexion(method="post")
+          p Connexion 
+          p
+            input(type="text" id="pseudoC" placeholder="ton pseudo" onkeyup="verif(this)")
+          p
+            input(type="password" id="passwordC" placeholder="mot de passe")
+            input(type="submit" name="" value="envoyer")
+          p
+    #waiting
+      h3.typo Qui allez vous cuisiner aujourd'hui ?
+      h5.typo Pour jouer, cliquez sur le bouton associé à un adversaire
+      p#punchline Pas de quartier, défiez qui vous voulez ! 
+      #play
+        section#hall
+        aside#highScores
+          p La crème de la crème :
+          ul#high
+      
+    #kitchen
+      h3.typo Bienvenue dans votre cuisine !
+      p.consigne Pour jouer, remplissez les ingrédients dans le formulaire, sans les quantités. 1 ingrédient = 1 ligne 
+      p.consigne 1 ingrédient trouvé = 1 point. N'oubliez pas de valider le formulaire ! Prêt ?
+      #kitchenContest
+      #cookingHall
+        form#cookingBook.form-jeu(method="post")
+          input(type="text" id="a" value="")
+          input(type="text" id="b" value="")
+          input(type="text" id="c" value="")
+          input(type="text" id="d" value="")
+          input(type="text" id="e" value="")
+          input(type="text" id="f" value="")
+          input(type="text" id="g" value="")
+          input(type="text" id="h" value="")
+          input(type="text" id="i" value="")
+          input(type="text" id="j" value="")
+          input(type="text" id="k" value="")
+          input(type="text" id="l" value="")
+          input(type="submit" id="ok" value="Envoyer la sauce !")
+    footer
+      p#credits © Audrey Rocher 2018
+    
+    
